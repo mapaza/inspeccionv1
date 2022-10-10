@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title>Verge3D Web Interactive</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <!-- Search Engines -->
+  <meta name="description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the art WebGL and HTML5 technologies.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Verge3D Web Interactive">
+  <meta name="twitter:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the art WebGL and HTML5 technologies.">
+  <meta name="twitter:image:src" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Verge3D Web Interactive">
+  <meta property="og:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the art WebGL and HTML5 technologies.">
+  <meta property="og:image" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <meta property="og:type" content="website">
+
+  <meta name="generator" content="Verge3D 4.0.1">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#0048a5">
+  <meta name="theme-color" content="#ffffff">
+
+ <!-- HTML2CANVAS -->
+ <script src="js/html2canvas.js"></script>
+ <!-- jQUERY -->
+ <script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet">
+
+  
+  <script src="v3d.js"></script>
+  <script src="Lab_tecsup revisión técnica.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="Lab_tecsup revisión técnica.css">
+  <link rel="stylesheet" type="text/css" href="kit_mantenimiento.css">
+  <link rel="stylesheet" type="text/css" href="kit_de_mantenimiento.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
+  <link rel="stylesheet" type="text/css" href="notes.css">
+  <link rel="stylesheet" type="text/css" href="video.css">
+  <link rel="stylesheet" type="text/css" href="progress-bar.css">
+  <link rel="stylesheet" type="text/css" href="remote.css">
+  <link rel="stylesheet" type="text/css" href="botones_control.css">
+</head>
+
+<body>
+  <div id="v3d-container">
+    <div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+ 
+    <div id="preloader_screen">
+      <svg
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 239.77 57.74" 
+    width="30vh" 
+    style="
+    position: center; 
+    margin: 20px auto 0 auto; 
+    padding-bottom:50px;"
+  >
+    <g>
+      <path
+        d="M77.52,18.68c0-.08,0-.13,0-.16v-.25a1,1,0,0,0-1-1H70.8a1,1,0,0,0-1,1c0,1.35,0,4.6,0,8.44V46.51c0,.08,0,.13,0,.16v.25a1,1,0,0,0,1,1h5.73a1,1,0,0,0,1-1c0-1.35,0-4.6,0-8.44Zm37.81-8.84H60a1,1,0,0,0-1,1.1c0,1.21,0,3.38,0,4.42a1,1,0,0,0,1,1.06H78.52s36.17,0,36.8,0a1,1,0,0,0,1-1V10.82A1,1,0,0,0,115.32,9.83Zm0,15.27H96.67a1,1,0,0,1-1-1,8.2,8.2,0,0,1,2.68-5.54c.44-.44.34-1.3-.92-1.3H90.16a.87.87,0,0,0-.72.38C82.13,28.3,87,46.07,105,46.77H115.3a1,1,0,0,0,1-1V41.25a1,1,0,0,0-1-1H104a8.36,8.36,0,0,1-8.33-7.57,1,1,0,0,1,1-1h18.62a1,1,0,0,0,1-1V26.11A1,1,0,0,0,115.3,25.1Zm50.49,15.15H137.63c-17.22-1.81-13.92-23.84.07-23.83h9.06a1,1,0,0,0,1-1V10.84a1,1,0,0,0-1-1h-11c-24,1.75-24.22,34.73-.36,36.92h20.07s9.7,0,10.33,0a1,1,0,0,0,1-1V41.23A1,1,0,0,0,165.79,40.25Z"
+      />
+      <path
+        d="M170.85,24.73h-8.74a6.24,6.24,0,0,1-3.36-.78,3.85,3.85,0,0,1-1.63-3.52q0-4,4.43-4H180a1,1,0,0,0,1-1v-4.6a1,1,0,0,0-1-1H160.6c-13.66,1-13.66,20.87.1,21.37h8.61a5.61,5.61,0,0,1,3.39,1.14,4.09,4.09,0,0,1,1.62,3.46,3.88,3.88,0,0,1-1.47,3.35,6.75,6.75,0,0,1-4,1.07,1,1,0,0,0-1,1.1c0,1.21,0,3.33,0,4.36a1,1,0,0,0,1,1.06h1.9c.32,0,.62,0,.92,0l.23,0,.83-.08h0c.28,0,.56-.09.83-.14l.21,0,.72-.18.08,0,.75-.25.19-.07.63-.26.09,0c.23-.1.45-.22.66-.34l.17-.09.54-.33.09-.06c.2-.13.39-.27.57-.41l.14-.11.45-.39.09-.08c.17-.15.33-.32.49-.48l.12-.13.38-.43.09-.1.4-.54.09-.14.3-.47.07-.12q.17-.29.32-.58l.07-.14c.08-.17.16-.34.23-.51l0-.09h0C184.24,33.72,180.83,25.12,170.85,24.73ZM227.19,9.86h-2.81c-7.94,0-6.44,0-6.73,0a1,1,0,0,0-1,1l0,4.59a1,1,0,0,0,1,1h9.53a4,4,0,0,1,3.39,1.6,5.87,5.87,0,0,1,1,3.59A6,6,0,0,1,230,26.22a4.33,4.33,0,0,1-3.1.87s-8.92,0-9.21,0a1,1,0,0,0-1,1l0,4.88a1,1,0,0,0,1,1h10.17C244.95,32,242.69,10.21,227.19,9.86Z"
+      />
+      <path
+        d="M214.14,9.89h-5.79a1,1,0,0,0-1,1V44h0a.34.34,0,0,0,.34.34.35.35,0,0,0,.19-.06c4-2.54,7-7,7.2-13.43V10.87A1,1,0,0,0,214.14,9.89Z"
+      />
+      <path
+        d="M205,37a.82.82,0,0,0-.59.25c-4.63,3.87-13,1.81-13.57-6.49V10.88a1,1,0,0,0-1-1h-5.71a1,1,0,0,0-1,1V30.77c.41,13.47,12.78,18.42,22,14.87h0a1,1,0,0,0,.65-.95V37.8A.82.82,0,0,0,205,37Z"
+      />
+      <path
+        d="M27.8.11c5,2.25,14,8.9,14.64,9.3a1,1,0,0,1,.26,1.67c-.14.1-11,10-13.11,11.75a1,1,0,0,1-1.66-.61c0-.43-.23-4.81-.23-4.81a6.77,6.77,0,0,0-6.6,2.41.85.85,0,0,1-1.29.09L13.51,12a.8.8,0,0,1,.13-1.2A23.5,23.5,0,0,1,26.78,5.48L26.35,1A1,1,0,0,1,27.8.11Z"
+      />
+      <path
+        d="M58,29.31c-2.61,4.82-9.91,13.31-10.35,13.91a1,1,0,0,1-1.69.14c-.09-.15-9.11-11.74-10.75-13.93a1,1,0,0,1,.73-1.62c.43,0,4.82.12,4.82.12a6.77,6.77,0,0,0-1.92-6.76.84.84,0,0,1,0-1.29l8.36-5.69a.8.8,0,0,1,1.19.22,23.49,23.49,0,0,1,4.32,13.5l4.54-.1A1,1,0,0,1,58,29.31Z"
+      />
+      <path
+        d="M.15,28.45c2.61-4.82,9.91-13.31,10.35-13.92a1,1,0,0,1,1.69-.13c.09.15,9.11,11.74,10.75,13.94A1,1,0,0,1,22.21,30c-.43,0-4.82-.12-4.82-.12a6.77,6.77,0,0,0,1.91,6.76.84.84,0,0,1,0,1.29l-8.36,5.69a.79.79,0,0,1-1.18-.22A23.46,23.46,0,0,1,5.43,29.86L.89,30A1,1,0,0,1,.15,28.45Z"
+      />
+      <path
+        d="M27.74,57.59C22.92,55,14.43,47.68,13.83,47.24a1,1,0,0,1-.13-1.69c.14-.09,11.74-9.11,13.93-10.75a1,1,0,0,1,1.61.73c0,.43-.12,4.82-.12,4.82a6.78,6.78,0,0,0,6.76-1.91.84.84,0,0,1,1.29,0l5.69,8.36A.8.8,0,0,1,42.65,48a23.51,23.51,0,0,1-13.49,4.33l.1,4.54A1,1,0,0,1,27.74,57.59Z"
+      />
+    </g>
+  </svg>
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="percentage" 
+            style=
+            "font-family:'Cabin', sans-serif;
+            font-size:20px"
+            >0%</div>
+          </div>
+        </div>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          width="160px"
+          height="160px"
+          class="preloader_circle"
+        >
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#032f58" />
+              <stop offset="100%" stop-color="#2c8ac7" />
+            </linearGradient>
+          </defs>
+          <circle id="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+      </div>
+    <!-- <div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div> -->
+  </div>
+
+<!-- demo modal informacion -->
+<div id="demo-modal" class="modal" role="dialog" tabindex="-1">
+  <div class="model-inner">
+    <div class="modal-header">
+     <!--  <button id="btn_reproducir_info" class="btn-play" aria-label="Reproducir">
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
+      </button>
+      <button id="btn_is_playing" class="btn-play" aria-label="Reproducir" style="display:none;">
+        <i class="fa fa-pause" aria-hidden="true"></i>
+      </button>
+      <button id="btn_is_paused" class="btn-play" aria-label="Reproducir" style="display:none;">
+        <i class="fa fa-play" aria-hidden="true"></i>
+      </button> -->
+      <h3 style="color: #2C8AC7;font-size: 3vh;  font-family: 'Rubik', sans-serif;">
+       
+        Bienvenido (a) al Laboratorio de Inspección Técnica</h3>
+      <button id="btn_cerrar_info" class="modal-close" data-id="demo-modal" aria-label="Close">
+        &times;
+      </button>
+    </div>
+    <p style="font-size: 2.5vh; font-family: 'Rubik', sans-serif;">
+      Utilice los controles del mouse para interactuar con el escenario
+      <div class="modal-content" style=" font-family: 'Rubik', sans-serif;font-size: 2.5vh;">
+       <!--  <ul>- Utilice los controles del mouse para interactuar con el escenario</ul> -->
+       <ol>
+        <li>Para rotar y desplazarse por las vistas del laboratorio utilice el botón izquierdo del mouse
+        <img class="centered-img"  src="https://i.ibb.co/KNqK4cs/click-izquierdo.jpg" width="80"/> </li>
+        <li>Para desplazarse hacia la derecha o arriba presione el botón derecho del mouse o las teclas físicas ↑ ↓ → ←
+        <img  class="centered-img" src="https://i.ibb.co/z4y1zxZ/mouse-derecho.png" width="80"/></li>
+        <li>Para acercar o alejar las vistas del laboratorio utilice la rueda del mouse
+        <img  class="centered-img" src="https://i.ibb.co/Kj5JBDY/rueda.jpg" width="80"/></li>
+      </ol>
+      <ul style="
+      line-height: 4vh;
+      font-family: 'Rubik', sans-serif;
+  ">
+        <li>Para iniciar el laboratorio, dirígase al Menú de Actividades ubicado en la parte lateral izquierda y empiece presionando sobre la primera actividad Inspección a Cigueñal</li>
+        <li>Después presione  sobre los elementos que se resaltan en color azul para continuar con el proceso</li>
+        <li>Realice el mismo procedimiento para continuar con las siguientes actividades </li>
+       </div>
+      </ul>
+    </p>
+    
+  </div>
+</div>
+<!-- end demo modal informacion -->
+<!-- Boton abrir info y progress bar -->
+<div class="topright">
+  <div class="container-pbar">
+    <div class="progress-container-pbar">
+      <div class="progress-pbar" id="progress-pbar"> </div>
+      <div class="circle-pbar active">1</div>
+      <div class="circle-pbar">2</div>
+      <div class="circle-pbar">3</div>
+      <div class="circle-pbar">4</div>
+       <div class="circle-pbar">5</div>
+    </div>
+  </div>
+</div>
+<div class="topright">
+  <button  id="btn_abrir_info" class="modal-open" data-id="demo-modal"><i class="fa fa-info"></i></button>
+</div>
+<!-- END Boton abrir info y progress bar -->
+<!-- demo modal objetivos -->
+<div id="demo-modal-objetivos" class="modal" role="dialog" tabindex="-1">
+  <div class="model-inner">
+    <div class="modal-header">
+      <h3 style="color: #2C8AC7;font-size: 3vh;">
+       Objetivos del Laboratorio</h3>
+      <button id="btn_cerrar_objetivos" class="modal-close" data-id="demo-modal" aria-label="Close">
+        &times;
+      </button>
+    </div>
+    <p style="font-size: 2.5vh;">
+     
+      <div class="modal-content" style=" font-family: 'Roboto', sans-serif;font-size: 2.5vh;">
+       <!--  <ul>- Utilice los controles del mouse para interactuar con el escenario</ul> -->
+       <ol style="
+       font-size: 2.5vh;
+       line-height: 4vh;
+   ">
+        <li> 
+          Realizar correctamente la inspección visual a diferentes componentes mecánicos para identificar diferentes tipos de desgaste como abrasión, adhesión, erosión, fatiga y corrosión.
+        </li>
+        <br/>
+        <li> 
+          Adquirir imágenes especificas de las zonas de desgaste de cada componente para que el estudiante pueda incluir esas imágenes en un informe técnico que permita evidenciar los diferentes tipos de desgaste identificados.
+
+        </li>
+      </ol>
+       
+       </div>
+    </p>
+    
+  </div>
+</div>
+<!-- end demo modal objetivos -->
+
+ <!-- Header -->
+<div class="header-lab">
+  <a class="logo">Identificación de Tipos de Desgaste</a>
+</div>
+ <!-- Fin Header -->
+<!-- Menu -->
+<div class="menu-container">
+	<ul class="vertical-nav">
+    <li>
+			<a class="option" 
+      style="
+      background: #656568;
+      transition: all 0.2s ease;
+      color: #f1f1f1;
+      font-size: 3vh;
+      
+      ">
+      ACTIVIDADES<i data-feather="activity"></i></a>
+		</li>
+		<li>
+			<a href="#" class="option" id="btn__etapa1">1. Inspección Visual de Cigueñal<i data-feather="activity"></i></a>
+			<!-- <div class="hover-menu" id="et1__submenu">
+			
+        <ul style="max-height: 50vh;" >
+					<li class="menu-header">Inspección del Actuador</li>
+
+					<li>
+            <a href="#" class="sub-step" id="et1__1">
+            <svg xmlns="http://www.w3.org/2000/svg" id="checked_icon_substep__1_1"
+            width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            width="16" height="16" fill="currentColor" id="icon_substep__1_1" class="bi bi-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            </svg>
+            Posicionar el actuador en el tornillo de banco</a>
+          </li>
+					
+
+        </ul>
+			</div> -->
+		</li>
+    <!--  SUBPASOS ETAPA 2 -->
+		<li>
+			<a href="#" class="option" id="btn__etapa2">2. Inspección Visual de Pistón<i data-feather="box"></i></a>
+			<!-- <div class="hover-menu" id="et2__submenu">
+			
+        <ul style="max-height: 40vh;" >
+					<li class="menu-header">Desmontaje del Actuador</li>
+					
+           </ul> 
+			</div> -->
+		</li>
+<!--  SUBPASOS ETAPA 3 -->
+		<li>
+			<a href="#" class="option" id="btn__etapa3">3. Inspección Visual de Bomba Refrigerante<i data-feather="cloud"></i></a>
+			<!-- <div class="hover-menu" id="et3__submenu" >
+				<ul style="max-height: 30vh;">
+					<li class="menu-header">Limpieza de Componentes</li>
+              </ul>   
+			</div> -->
+        </li>
+<!--  SUBPASOS ETAPA 4 -->
+		<li>
+			<a href="#" class="option" id="btn__etapa4">4. Inspección Visual de Pin de Transmisión<i data-feather="database"></i></a>
+		<!-- 	<div class="hover-menu" id="et4__submenu">
+				<ul style="max-height: 60vh;">
+				<li class="menu-header">Lubricación y ensable de Componentes</li>
+        
+
+				</ul>
+			</div> -->
+		</li>
+<!--  SUBPASOS ETAPA 5 -->
+		<li>
+			<a href="#" class="option" id="btn__etapa5">5. Inspección Visual de Camisa de Motor<i data-feather="inbox"></i></a>
+      <!-- <div class="hover-menu" style="position:fixed;"> -->
+       <!--  <div class="hover-menu" id="et5__submenu">
+				<ul style="max-height: 60vh;">
+					<li class="menu-header">Montaje del Actuador</li>
+
+					 
+				</ul>
+			</div> -->
+		</li>
+    
+	</ul>
+</div>
+<!-- End Menu -->
+
+<!-- NOTAS CAJETIN -->
+<div id="container-description">
+
+
+<div id="nota_1_1_c" style="display:none">
+  <div class="notes-div" id="nota_1_1" >
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_1,nota_1_1_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      <p>
+  Gire el componente en todas las direcciones para realizar la inspección general y ubicar las zonas con el desgaste característico. Al terminar presione el botón de siguiente para continuar con el laboratorio.
+      </p>
+    </div>     
+  </div>
+  
+  <div class="notes-div" id="nota_1_1_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_1_1_b,nota_1_1);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        >
+          !
+        </a>
+      </div>  
+  </div>
+</div>
+
+<div id="nota_1_2_c" style="display:none">
+  <div class="notes-div" id="nota_1_2" >
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_2,nota_1_2_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      <p>
+  Utilice la linterna para poder iluminar el objeto a inspeccionar.
+      </p>
+    </div>     
+  </div>
+  
+  <div class="notes-div" id="nota_1_2_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_1_2_b,nota_1_2);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        >
+          !
+        </a>
+      </div>  
+  </div>
+</div>
+
+<div id="nota_1_3_c" style="display:none">
+  <div class="notes-div" id="nota_1_3" >
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_3,nota_1_3_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      <p>
+  Utilice la lupa para visualizar un detalle mayor del desgaste. Mire a través de ella y realice el acercamiento necesario. Presione sobre el botón "Siguiente" para realizar una inspección en cada lado del componente.
+      </p>
+    </div>     
+  </div>
+  
+  <div class="notes-div" id="nota_1_3_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_1_3_b,nota_1_3);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        >
+          !
+        </a>
+      </div>  
+  </div>
+</div>
+
+<div id="nota_1_4_c" style="display:none">
+  <div class="notes-div" id="nota_1_4" >
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_4,nota_1_4_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      <p>
+  Una vez se haya posicionado y aplicado el zoom adecuado al componente. Tome una fotografía de la superficie.
+      </p>
+    </div>     
+  </div>
+  
+  <div class="notes-div" id="nota_1_4_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_1_4_b,nota_1_4);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        >
+          !
+        </a>
+      </div>  
+  </div>
+</div>
+
+  <!-- <div class="notes-div" id="nota_1_5" style="display:none">
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_5,nota_1_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      <p>
+  Presione sobre el botón para iniciar la herramienta de captura de pantalla.  
+  Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". 
+  Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+      </p>
+    </div>     
+  </div> -->
+
+  <div id="nota_1_5_c" style="display:none">
+  <div class="notes-div" id="nota_1_5" >
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_5,nota_1_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      <p>
+        <!-- Utilice el mando de control a la derecha para mover la posición de la linterna y lupa. Recuerde usar los botones del mouse y teclado para desplazarse sobre la escena y obtener el enfoque apropiado.    
+  Luego, presione sobre el botón verde para tomar captura del desgaste en la superficie. Esta imagen se debe adjuntar al informe. -->
+  Utilice el mando de control ubicado en el lado inferior derecho para mover la posición de la linterna y lupa. Recuerde usar los botones del mouse y teclado para desplazarse sobre la escena y obtener el enfoque apropiado.    
+  
+</p>
+    </div>     
+  </div>
+  
+  <div class="notes-div" id="nota_1_5_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_1_5_b,nota_1_5);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        >
+          !
+        </a>
+      </div>  
+  </div>
+</div>
+
+<div id="nota_1_6_c" style="display:none">
+  <div class="notes-div" id="nota_1_6" >
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_6,nota_1_6_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      <p>
+  Ahora, utilice el microscopio para poder observar el desgaste a un nivel de detalle mucho mayor.
+      </p>
+    </div>     
+  </div>
+  
+  <div class="notes-div" id="nota_1_6_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_1_6_b,nota_1_6);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        >
+          !
+        </a>
+      </div>  
+  </div>
+</div>
+
+<div id="nota_1_7_c" style="display:none">
+  <div class="notes-div" id="nota_1_7" >
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_7,nota_1_7_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+     <!--  <p>
+Pause el video cuando observe el desgaste en la vista de microscopio y presione el botón para iniciar la herramienta de captura de pantalla. 
+Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". <br/>
+Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+      </p> -->
+      <!-- <p>Observe la vista del microscopio en la pantalla. Puede utilizar el mouse para acercar o alejar la imagen.  Además, utilice el control ubicado en la derecha para pausar el video y obtener las capturas apropiadas.
+        Cuando se obtenga en enfoque apropiado, presione sobre el botón verde para capturar la pantalla. Adjunte esta imagen en el informe técnico.</p> -->
+        <p>Observe la vista del microscopio en la pantalla de la computadora portátil. Interactúe con los botones “+” y “-” ubicados en el lado derecho inferior según sea necesario para realizar el zoom y obtener el enfoque adecuado y a continuación tomar la captura correspondiente</p>
+    </div>     
+  </div>
+  
+  <div class="notes-div" id="nota_1_7_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_1_7_b,nota_1_7);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        >
+          !
+        </a>
+      </div>  
+  </div>
+</div>
+
+<div id="nota_1_8_c" style="display:none">
+  <div class="notes-div" id="nota_1_8" >
+    <div class="message  message--warning">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_1_8,nota_1_8_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      <p>
+ Ha culminado la primera actividad de Inspeccion Visual de Cigueñal. No olvide adjuntar las imágenes obtenidas durante el laboratorio en el Informe Técnico de Identificación de Tipos de Desgaste.
+      </p>
+    </div>     
+  </div>
+  
+  <div class="notes-div" id="nota_1_8_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_1_8_b,nota_1_8);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+        >
+          !
+        </a>
+      </div>  
+  </div>
+</div>
+  <!-- -----------------------------------------------------------------------------------------222 -->
+  <div id="nota_2_1_c" style="display:none">
+    <div class="notes-div" id="nota_2_1" >
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_2_1,nota_2_1_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+        <p>
+    Gire el componente en todas las direcciones para ubicar las zonas con el desgaste característico. Al terminar presione el botón de siguiente para continuar con el laboratorio.
+        </p>
+      </div>     
+    </div>
+    
+    <div class="notes-div" id="nota_2_1_b" style="display: none; width: 4%; top: 22%;">
+        <div id="right">
+          <a href="#" onclick="ShowNota(nota_2_1_b,nota_2_1);"  
+          style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          >
+            !
+          </a>
+        </div>  
+    </div>
+  </div>
+  
+  <div id="nota_2_2_c" style="display:none">
+    <div class="notes-div" id="nota_2_2" >
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_2_2,nota_2_2_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+        <p>
+    Utilice la linterna para poder iluminar el objeto a inspeccionar.
+        </p>
+      </div>     
+    </div>
+    
+    <div class="notes-div" id="nota_2_2_b" style="display: none; width: 4%; top: 22%;">
+        <div id="right">
+          <a href="#" onclick="ShowNota(nota_2_2_b,nota_2_2);"  
+          style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          >
+            !
+          </a>
+        </div>  
+    </div>
+  </div>
+  
+  <div id="nota_2_3_c" style="display:none">
+    <div class="notes-div" id="nota_2_3" >
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_2_3,nota_2_3_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+        <p>
+    Utilice la lupa para visualizar un detalle mayor del desgaste. Mire a través de ella y realice el acercamiento necesario.
+        </p>
+      </div>     
+    </div>
+    
+    <div class="notes-div" id="nota_2_3_b" style="display: none; width: 4%; top: 22%;">
+        <div id="right">
+          <a href="#" onclick="ShowNota(nota_2_3_b,nota_2_3);"  
+          style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          >
+            !
+          </a>
+        </div>  
+    </div>
+  </div>
+  
+  <div id="nota_2_4_c" style="display:none">
+    <div class="notes-div" id="nota_2_4" >
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_2_4,nota_2_4_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+        <p>
+    Una vez se haya posicionado y aplicado el zoom adecuado al componente. Tome una fotografía de la superficie.
+        </p>
+      </div>     
+    </div>
+    
+    <div class="notes-div" id="nota_2_4_b" style="display: none; width: 4%; top: 22%;">
+        <div id="right">
+          <a href="#" onclick="ShowNota(nota_2_4_b,nota_2_4);"  
+          style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          >
+            !
+          </a>
+        </div>  
+    </div>
+  </div>
+  
+    <!-- <div class="notes-div" id="nota_1_5" style="display:none">
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_1_5,nota_1_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+        <p>
+    Presione sobre el botón para iniciar la herramienta de captura de pantalla.  
+    Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". 
+    Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+        </p>
+      </div>     
+    </div> -->
+  
+    <div id="nota_2_5_c" style="display:none">
+    <div class="notes-div" id="nota_2_5" >
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_2_5,nota_2_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+        <p>
+          Utilice el mando de control a la derecha para mover la posición de la linterna y lupa. Recuerde usar los botones del mouse y teclado para desplazarse sobre la escena y obtener el enfoque apropiado.    
+    Luego, presione sobre el botón verde para tomar captura del desgaste en la superficie. Esta imagen se debe adjuntar al informe.
+    
+  </p>
+      </div>     
+    </div>
+    
+    <div class="notes-div" id="nota_2_5_b" style="display: none; width: 4%; top: 22%;">
+        <div id="right">
+          <a href="#" onclick="ShowNota(nota_2_5_b,nota_2_5);"  
+          style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          >
+            !
+          </a>
+        </div>  
+    </div>
+  </div>
+  
+  <div id="nota_2_6_c" style="display:none">
+    <div class="notes-div" id="nota_2_6" >
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_2_6,nota_2_6_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+        <p>
+    Ahora, utilice el microscopio para poder observar el desgaste a un nivel de detalle mucho mayor.
+        </p>
+      </div>     
+    </div>
+    
+    <div class="notes-div" id="nota_2_6_b" style="display: none; width: 4%; top: 22%;">
+        <div id="right">
+          <a href="#" onclick="ShowNota(nota_2_6_b,nota_2_6);"  
+          style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          >
+            !
+          </a>
+        </div>  
+    </div>
+  </div>
+  
+  <div id="nota_2_7_c" style="display:none">
+    <div class="notes-div" id="nota_2_7" >
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_2_7,nota_2_7_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+       <!--  <p>
+  Pause el video cuando observe el desgaste en la vista de microscopio y presione el botón para iniciar la herramienta de captura de pantalla. 
+  Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". <br/>
+  Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+        </p> -->
+        <p>Observe la vista del microscopio en la pantalla. Puede utilizar el mouse para acercar o alejar la imagen.  Además, utilice el control ubicado en la derecha para pausar el video y obtener las capturas apropiadas.
+          Cuando se obtenga en enfoque apropiado, presione sobre el botón verde para capturar la pantalla. Adjunte esta imagen en el informe técnico.</p>
+      </div>     
+    </div>
+    
+    <div class="notes-div" id="nota_2_7_b" style="display: none; width: 4%; top: 22%;">
+        <div id="right">
+          <a href="#" onclick="ShowNota(nota_2_7_b,nota_2_7);"  
+          style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          >
+            !
+          </a>
+        </div>  
+    </div>
+  </div>
+  
+  <div id="nota_2_8_c" style="display:none">
+    <div class="notes-div" id="nota_2_8" >
+      <div class="message  message--warning">
+        <div id="right">
+          <a href="#" onclick="CollapseNota(nota_2_8,nota_2_8_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+        </div>
+        <p>
+   Ha culminado la primera actividad de Inspeccion Visual de Pistón. No olvide adjuntar las imágenes obtenidas durante el laboratorio en el Informe Técnico de Identificación de Tipos de Desgaste.
+        </p>
+      </div>     
+    </div>
+    
+    <div class="notes-div" id="nota_2_8_b" style="display: none; width: 4%; top: 22%;">
+        <div id="right">
+          <a href="#" onclick="ShowNota(nota_2_8_b,nota_2_8);"  
+          style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          >
+            !
+          </a>
+        </div>  
+    </div>
+  </div>
+    <!-- -----------------------------------------------------------------------------------------3333 -->
+    <div id="nota_3_1_c" style="display:none">
+      <div class="notes-div" id="nota_3_1" >
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_3_1,nota_3_1_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+          <p>
+      Gire el componente en todas las direcciones para ubicar las zonas con el desgaste característico. Al terminar presione el botón de siguiente para continuar con el laboratorio.
+          </p>
+        </div>     
+      </div>
+      
+      <div class="notes-div" id="nota_3_1_b" style="display: none; width: 4%; top: 22%;">
+          <div id="right">
+            <a href="#" onclick="ShowNota(nota_3_1_b,nota_3_1);"  
+            style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            >
+              !
+            </a>
+          </div>  
+      </div>
+    </div>
+    
+    <div id="nota_3_2_c" style="display:none">
+      <div class="notes-div" id="nota_3_2" >
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_3_2,nota_3_2_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+          <p>
+      Utilice la linterna para poder iluminar el objeto a inspeccionar.
+          </p>
+        </div>     
+      </div>
+      
+      <div class="notes-div" id="nota_3_2_b" style="display: none; width: 4%; top: 22%;">
+          <div id="right">
+            <a href="#" onclick="ShowNota(nota_3_2_b,nota_3_2);"  
+            style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            >
+              !
+            </a>
+          </div>  
+      </div>
+    </div>
+    
+    <div id="nota_3_3_c" style="display:none">
+      <div class="notes-div" id="nota_3_3" >
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_3_3,nota_3_3_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+          <p>
+      Utilice la lupa para visualizar un detalle mayor del desgaste. Mire a través de ella y realice el acercamiento necesario.
+          </p>
+        </div>     
+      </div>
+      
+      <div class="notes-div" id="nota_3_3_b" style="display: none; width: 4%; top: 22%;">
+          <div id="right">
+            <a href="#" onclick="ShowNota(nota_3_3_b,nota_3_3);"  
+            style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            >
+              !
+            </a>
+          </div>  
+      </div>
+    </div>
+    
+    <div id="nota_3_4_c" style="display:none">
+      <div class="notes-div" id="nota_3_4" >
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_3_4,nota_3_4_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+          <p>
+      Una vez se haya posicionado y aplicado el zoom adecuado al componente. Tome una fotografía de la superficie.
+          </p>
+        </div>     
+      </div>
+      
+      <div class="notes-div" id="nota_3_4_b" style="display: none; width: 4%; top: 22%;">
+          <div id="right">
+            <a href="#" onclick="ShowNota(nota_3_4_b,nota_3_4);"  
+            style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            >
+              !
+            </a>
+          </div>  
+      </div>
+    </div>
+    
+      <!-- <div class="notes-div" id="nota_1_5" style="display:none">
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_1_5,nota_1_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+          <p>
+      Presione sobre el botón para iniciar la herramienta de captura de pantalla.  
+      Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". 
+      Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+          </p>
+        </div>     
+      </div> -->
+    
+      <div id="nota_3_5_c" style="display:none">
+      <div class="notes-div" id="nota_3_5" >
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_3_5,nota_3_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+          <p>
+            Utilice el mando de control a la derecha para mover la posición de la linterna y lupa. Recuerde usar los botones del mouse y teclado para desplazarse sobre la escena y obtener el enfoque apropiado.    
+      Luego, presione sobre el botón verde para tomar captura del desgaste en la superficie. Esta imagen se debe adjuntar al informe.
+      
+    </p>
+        </div>     
+      </div>
+      
+      <div class="notes-div" id="nota_3_5_b" style="display: none; width: 4%; top: 22%;">
+          <div id="right">
+            <a href="#" onclick="ShowNota(nota_3_5_b,nota_3_5);"  
+            style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            >
+              !
+            </a>
+          </div>  
+      </div>
+    </div>
+    
+    <div id="nota_3_6_c" style="display:none">
+      <div class="notes-div" id="nota_3_6" >
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_3_6,nota_3_6_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+          <p>
+      Ahora, utilice el microscopio para poder observar el desgaste a un nivel de detalle mucho mayor.
+          </p>
+        </div>     
+      </div>
+      
+      <div class="notes-div" id="nota_3_6_b" style="display: none; width: 4%; top: 22%;">
+          <div id="right">
+            <a href="#" onclick="ShowNota(nota_3_6_b,nota_3_6);"  
+            style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            >
+              !
+            </a>
+          </div>  
+      </div>
+    </div>
+    
+    <div id="nota_3_7_c" style="display:none">
+      <div class="notes-div" id="nota_3_7" >
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_3_7,nota_3_7_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+         <!--  <p>
+    Pause el video cuando observe el desgaste en la vista de microscopio y presione el botón para iniciar la herramienta de captura de pantalla. 
+    Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". <br/>
+    Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+          </p> -->
+          <p>Observe la vista del microscopio en la pantalla. Puede utilizar el mouse para acercar o alejar la imagen.  Además, utilice el control ubicado en la derecha para pausar el video y obtener las capturas apropiadas.
+            Cuando se obtenga en enfoque apropiado, presione sobre el botón verde para capturar la pantalla. Adjunte esta imagen en el informe técnico.</p>
+        </div>     
+      </div>
+      
+      <div class="notes-div" id="nota_3_7_b" style="display: none; width: 4%; top: 22%;">
+          <div id="right">
+            <a href="#" onclick="ShowNota(nota_3_7_b,nota_3_7);"  
+            style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            >
+              !
+            </a>
+          </div>  
+      </div>
+    </div>
+    
+    <div id="nota_3_8_c" style="display:none">
+      <div class="notes-div" id="nota_3_8" >
+        <div class="message  message--warning">
+          <div id="right">
+            <a href="#" onclick="CollapseNota(nota_3_8,nota_3_8_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+          </div>
+          <p>
+     Ha culminado la primera actividad de Inspeccion Visual de Bomba Refrigerante. No olvide adjuntar las imágenes obtenidas durante el laboratorio en el Informe Técnico de Identificación de Tipos de Desgaste.
+          </p>
+        </div>     
+      </div>
+      
+      <div class="notes-div" id="nota_3_8_b" style="display: none; width: 4%; top: 22%;">
+          <div id="right">
+            <a href="#" onclick="ShowNota(nota_3_8_b,nota_3_8);"  
+            style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+            >
+              !
+            </a>
+          </div>  
+      </div>
+    </div>
+      <!-- -----------------------------------------------------------------------------------------444 -->
+      <div id="nota_4_1_c" style="display:none">
+        <div class="notes-div" id="nota_4_1" >
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_4_1,nota_4_1_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+            <p>
+        Gire el componente en todas las direcciones para ubicar las zonas con el desgaste característico. Al terminar presione el botón de siguiente para continuar con el laboratorio.
+            </p>
+          </div>     
+        </div>
+        
+        <div class="notes-div" id="nota_4_1_b" style="display: none; width: 4%; top: 22%;">
+            <div id="right">
+              <a href="#" onclick="ShowNota(nota_4_1_b,nota_4_1);"  
+              style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+              >
+                !
+              </a>
+            </div>  
+        </div>
+      </div>
+      
+      <div id="nota_4_2_c" style="display:none">
+        <div class="notes-div" id="nota_4_2" >
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_4_2,nota_4_2_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+            <p>
+        Utilice la linterna para poder iluminar el objeto a inspeccionar.
+            </p>
+          </div>     
+        </div>
+        
+        <div class="notes-div" id="nota_4_2_b" style="display: none; width: 4%; top: 22%;">
+            <div id="right">
+              <a href="#" onclick="ShowNota(nota_4_2_b,nota_4_2);"  
+              style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+              >
+                !
+              </a>
+            </div>  
+        </div>
+      </div>
+      
+      <div id="nota_4_3_c" style="display:none">
+        <div class="notes-div" id="nota_4_3" >
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_4_3,nota_4_3_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+            <p>
+        Utilice la lupa para visualizar un detalle mayor del desgaste. Mire a través de ella y realice el acercamiento necesario.
+            </p>
+          </div>     
+        </div>
+        
+        <div class="notes-div" id="nota_4_3_b" style="display: none; width: 4%; top: 22%;">
+            <div id="right">
+              <a href="#" onclick="ShowNota(nota_4_3_b,nota_4_3);"  
+              style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+              >
+                !
+              </a>
+            </div>  
+        </div>
+      </div>
+      
+      <div id="nota_4_4_c" style="display:none">
+        <div class="notes-div" id="nota_4_4" >
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_4_4,nota_4_4_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+            <p>
+        Una vez se haya posicionado y aplicado el zoom adecuado al componente. Tome una fotografía de la superficie.
+            </p>
+          </div>     
+        </div>
+        
+        <div class="notes-div" id="nota_4_4_b" style="display: none; width: 4%; top: 22%;">
+            <div id="right">
+              <a href="#" onclick="ShowNota(nota_4_4_b,nota_4_4);"  
+              style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+              >
+                !
+              </a>
+            </div>  
+        </div>
+      </div>
+      
+        <!-- <div class="notes-div" id="nota_1_5" style="display:none">
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_1_5,nota_1_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+            <p>
+        Presione sobre el botón para iniciar la herramienta de captura de pantalla.  
+        Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". 
+        Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+            </p>
+          </div>     
+        </div> -->
+      
+        <div id="nota_4_5_c" style="display:none">
+        <div class="notes-div" id="nota_4_5" >
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_4_5,nota_4_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+            <p>
+              Utilice el mando de control a la derecha para mover la posición de la linterna y lupa. Recuerde usar los botones del mouse y teclado para desplazarse sobre la escena y obtener el enfoque apropiado.    
+        Luego, presione sobre el botón verde para tomar captura del desgaste en la superficie. Esta imagen se debe adjuntar al informe.
+        
+      </p>
+          </div>     
+        </div>
+        
+        <div class="notes-div" id="nota_4_5_b" style="display: none; width: 4%; top: 22%;">
+            <div id="right">
+              <a href="#" onclick="ShowNota(nota_4_5_b,nota_4_5);"  
+              style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+              >
+                !
+              </a>
+            </div>  
+        </div>
+      </div>
+      
+      <div id="nota_4_6_c" style="display:none">
+        <div class="notes-div" id="nota_4_6" >
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_4_6,nota_4_6_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+            <p>
+        Ahora, utilice el microscopio para poder observar el desgaste a un nivel de detalle mucho mayor.
+            </p>
+          </div>     
+        </div>
+        
+        <div class="notes-div" id="nota_4_6_b" style="display: none; width: 4%; top: 22%;">
+            <div id="right">
+              <a href="#" onclick="ShowNota(nota_4_6_b,nota_4_6);"  
+              style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+              >
+                !
+              </a>
+            </div>  
+        </div>
+      </div>
+      
+      <div id="nota_4_7_c" style="display:none">
+        <div class="notes-div" id="nota_4_7" >
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_4_7,nota_4_7_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+           <!--  <p>
+      Pause el video cuando observe el desgaste en la vista de microscopio y presione el botón para iniciar la herramienta de captura de pantalla. 
+      Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". <br/>
+      Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+            </p> -->
+            <p>Observe la vista del microscopio en la pantalla. Puede utilizar el mouse para acercar o alejar la imagen.  Además, utilice el control ubicado en la derecha para pausar el video y obtener las capturas apropiadas.
+              Cuando se obtenga en enfoque apropiado, presione sobre el botón verde para capturar la pantalla. Adjunte esta imagen en el informe técnico.</p>
+          </div>     
+        </div>
+        
+        <div class="notes-div" id="nota_4_7_b" style="display: none; width: 4%; top: 22%;">
+            <div id="right">
+              <a href="#" onclick="ShowNota(nota_4_7_b,nota_4_7);"  
+              style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+              >
+                !
+              </a>
+            </div>  
+        </div>
+      </div>
+      
+      <div id="nota_4_8_c" style="display:none">
+        <div class="notes-div" id="nota_4_8" >
+          <div class="message  message--warning">
+            <div id="right">
+              <a href="#" onclick="CollapseNota(nota_4_8,nota_4_8_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+            </div>
+            <p>
+       Ha culminado la primera actividad de Inspeccion Visual de Pin de Tramsmisión. No olvide adjuntar las imágenes obtenidas durante el laboratorio en el Informe Técnico de Identificación de Tipos de Desgaste.
+            </p>
+          </div>     
+        </div>
+        
+        <div class="notes-div" id="nota_4_8_b" style="display: none; width: 4%; top: 22%;">
+            <div id="right">
+              <a href="#" onclick="ShowNota(nota_4_8_b,nota_4_8);"  
+              style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+              >
+                !
+              </a>
+            </div>  
+        </div>
+      </div>
+        <!-- ----------------------------------------------------------------------------------------- 555-->
+        <div id="nota_5_1_c" style="display:none">
+          <div class="notes-div" id="nota_5_1" >
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_5_1,nota_5_1_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+              <p>
+          Gire el componente en todas las direcciones para ubicar las zonas con el desgaste característico. Al terminar presione el botón de siguiente para continuar con el laboratorio.
+              </p>
+            </div>     
+          </div>
+          
+          <div class="notes-div" id="nota_5_1_b" style="display: none; width: 4%; top: 22%;">
+              <div id="right">
+                <a href="#" onclick="ShowNota(nota_5_1_b,nota_5_1);"  
+                style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+                >
+                  !
+                </a>
+              </div>  
+          </div>
+        </div>
+        
+        <div id="nota_5_2_c" style="display:none">
+          <div class="notes-div" id="nota_5_2" >
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_5_2,nota_5_2_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+              <p>
+          Utilice la linterna para poder iluminar el objeto a inspeccionar.
+              </p>
+            </div>     
+          </div>
+          
+          <div class="notes-div" id="nota_5_2_b" style="display: none; width: 4%; top: 22%;">
+              <div id="right">
+                <a href="#" onclick="ShowNota(nota_5_2_b,nota_5_2);"  
+                style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+                >
+                  !
+                </a>
+              </div>  
+          </div>
+        </div>
+        
+        <div id="nota_5_3_c" style="display:none">
+          <div class="notes-div" id="nota_5_3" >
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_5_3,nota_5_3_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+              <p>
+          Utilice la lupa para visualizar un detalle mayor del desgaste. Mire a través de ella y realice el acercamiento necesario.
+              </p>
+            </div>     
+          </div>
+          
+          <div class="notes-div" id="nota_5_3_b" style="display: none; width: 4%; top: 22%;">
+              <div id="right">
+                <a href="#" onclick="ShowNota(nota_5_3_b,nota_5_3);"  
+                style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+                >
+                  !
+                </a>
+              </div>  
+          </div>
+        </div>
+        
+        <div id="nota_5_4_c" style="display:none">
+          <div class="notes-div" id="nota_5_4" >
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_5_4,nota_5_4_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+              <p>
+          Una vez se haya posicionado y aplicado el zoom adecuado al componente. Tome una fotografía de la superficie.
+              </p>
+            </div>     
+          </div>
+          
+          <div class="notes-div" id="nota_5_4_b" style="display: none; width: 4%; top: 22%;">
+              <div id="right">
+                <a href="#" onclick="ShowNota(nota_5_4_b,nota_5_4);"  
+                style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+                >
+                  !
+                </a>
+              </div>  
+          </div>
+        </div>
+        
+          <!-- <div class="notes-div" id="nota_1_5" style="display:none">
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_1_5,nota_1_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+              <p>
+          Presione sobre el botón para iniciar la herramienta de captura de pantalla.  
+          Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". 
+          Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+              </p>
+            </div>     
+          </div> -->
+        
+          <div id="nota_5_5_c" style="display:none">
+          <div class="notes-div" id="nota_5_5" >
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_5_5,nota_5_5_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+              <p>
+                Utilice el mando de control a la derecha para mover la posición de la linterna y lupa. Recuerde usar los botones del mouse y teclado para desplazarse sobre la escena y obtener el enfoque apropiado.    
+          Luego, presione sobre el botón verde para tomar captura del desgaste en la superficie. Esta imagen se debe adjuntar al informe.
+          
+        </p>
+            </div>     
+          </div>
+          
+          <div class="notes-div" id="nota_5_5_b" style="display: none; width: 4%; top: 22%;">
+              <div id="right">
+                <a href="#" onclick="ShowNota(nota_5_5_b,nota_5_5);"  
+                style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+                >
+                  !
+                </a>
+              </div>  
+          </div>
+        </div>
+        
+        <div id="nota_5_6_c" style="display:none">
+          <div class="notes-div" id="nota_5_6" >
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_5_6,nota_5_6_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+              <p>
+          Ahora, utilice el microscopio para poder observar el desgaste a un nivel de detalle mucho mayor.
+              </p>
+            </div>     
+          </div>
+          
+          <div class="notes-div" id="nota_5_6_b" style="display: none; width: 4%; top: 22%;">
+              <div id="right">
+                <a href="#" onclick="ShowNota(nota_5_6_b,nota_5_6);"  
+                style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+                >
+                  !
+                </a>
+              </div>  
+          </div>
+        </div>
+        
+        <div id="nota_5_7_c" style="display:none">
+          <div class="notes-div" id="nota_5_7" >
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_5_7,nota_5_7_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+             <!--  <p>
+        Pause el video cuando observe el desgaste en la vista de microscopio y presione el botón para iniciar la herramienta de captura de pantalla. 
+        Luego presione el botón verde "Screenshoot" y elija la opción de Pestaña de Chrome "Laboratorios". <br/>
+        Finalmente, puede utilizar las herramientas de ajuste "Select" y recorte de una área específica "Crop" y descargue la imagen que se debe adjuntar al informe "Save".
+              </p> -->
+              <p>Observe la vista del microscopio en la pantalla. Puede utilizar el mouse para acercar o alejar la imagen.  Además, utilice el control ubicado en la derecha para pausar el video y obtener las capturas apropiadas.
+                Cuando se obtenga en enfoque apropiado, presione sobre el botón verde para capturar la pantalla. Adjunte esta imagen en el informe técnico.</p>
+            </div>     
+          </div>
+          
+          <div class="notes-div" id="nota_5_7_b" style="display: none; width: 4%; top: 22%;">
+              <div id="right">
+                <a href="#" onclick="ShowNota(nota_5_7_b,nota_5_7);"  
+                style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+                >
+                  !
+                </a>
+              </div>  
+          </div>
+        </div>
+        
+        <div id="nota_5_8_c" style="display:none">
+          <div class="notes-div" id="nota_5_8" >
+            <div class="message  message--warning">
+              <div id="right">
+                <a href="#" onclick="CollapseNota(nota_5_8,nota_5_8_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+              </div>
+              <p>
+         Ha culminado la primera actividad de Inspeccion Visual de Camisa de Motor. No olvide adjuntar las imágenes obtenidas durante el laboratorio en el Informe Técnico de Identificación de Tipos de Desgaste.
+              </p>
+            </div>     
+          </div>
+          
+          <div class="notes-div" id="nota_5_8_b" style="display: none; width: 4%; top: 22%;">
+              <div id="right">
+                <a href="#" onclick="ShowNota(nota_5_8_b,nota_5_8);"  
+                style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background: #2196f3;padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+                >
+                  !
+                </a>
+              </div>  
+          </div>
+        </div>
+          <!-- ----------------------------------------------------------------------------------------- -->
+
+  </div>
+<!-- END NOTAS CAJETIN -->
+
+
+<!-- NOTAS CAJETIN CON PUNTOS DE REFERENCIA-->
+<div id="container-description" >
+
+<div id="nota_linterna_1_c" style="display:none" class="notas-herramientas-container">
+  <div class="notes-div-p" id="nota_linterna_1">
+    <div class="message-p message--1">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_linterna_1,nota_linterna_1_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      
+  Presione la linterna para iluminar el componente a inspeccionar
+      
+    </div>     
+  </div>
+  
+  <div class="notes-div-p" id="nota_linterna_1_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_linterna_1_b,nota_linterna_1);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background:rgb(13 90 141);padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;font-family: 'Rubik';font-weight: 900;"
+        >
+          1
+        </a>
+      </div>  
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div id="nota_lupa_2_c" style="display:none" class="notas-herramientas-container">
+  <div class="notes-div-p" id="nota_lupa_2">
+    <div class="message-p message--2">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_lupa_2,nota_lupa_2_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      
+  Presione sobre la lupa para poder observar el elemento con mayor precisión.
+      
+    </div>     
+  </div>
+  
+  <div class="notes-div-p" id="nota_lupa_2_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_lupa_2_b,nota_lupa_2);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background:rgb(13 90 141);padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;font-family: 'Rubik';font-weight: 900;"
+        >
+          2
+        </a>
+      </div>  
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div id="nota_camara_3_c" style="display:none" class="notas-herramientas-container">
+  <div class="notes-div-p" id="nota_camara_3">
+    <div class="message-p message--3">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_camara_3,nota_camara_3_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      
+        Ahora, es momento de tomar una fotografía de la superficie y su desgaste.
+      
+    </div>     
+  </div>
+  
+  <div class="notes-div-p" id="nota_camara_3_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_camara_3_b,nota_camara_3);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background:rgb(13 90 141);padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;font-family: 'Rubik';font-weight: 900;"
+        >
+          3
+        </a>
+      </div>  
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<div id="nota_microscopio_3_c" style="display:none" class="notas-herramientas-container">
+  <div class="notes-div-p" id="nota_microscopio_3">
+    <div class="message-p message--4">
+      <div id="right">
+        <a href="#" onclick="CollapseNota(nota_microscopio_3,nota_microscopio_3_b);"  style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 3.2vh;color: #2196f3;"><i class="fa fa-minus-square" aria-hidden="true"></i></a>
+      </div>
+      
+  Presione sobre el microscopio para obtener una vista a mayor detalle del desgaste.
+      
+    </div>     
+  </div>
+  
+  <div class="notes-div-p" id="nota_microscopio_3_b" style="display: none; width: 4%; top: 22%;">
+      <div id="right">
+        <a href="#" onclick="ShowNota(nota_microscopio_3_b,nota_microscopio_3);"  
+        style="text-decoration: none; font-family:'Cabin';font-weight: 100;font-size: 4vh;color: white;background:rgb(13 90 141);padding: 1vh 3vh;border-radius: 4vh;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;font-family: 'Rubik';font-weight: 900;"
+        >
+          4
+        </a>
+      </div>  
+  </div>
+</div>
+  
+  <!-- END NOTAS CAJETIN CON PUNTOS DE REFERENCIA-->
+
+
+<!-- NOTA POSICION BOTONES -->
+<div class="btn-nota-pos" id="btn-anotaciones-container">
+
+  <div id="nota_1_1_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_1_2_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_1_3_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_1_4_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_1_5_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_1_6_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_1_7_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_1_8_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+
+
+
+  <div id="nota_2_1_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_2_2_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_2_3_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_2_4_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_2_5_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_2_6_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_2_7_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_2_8_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+
+
+
+  <div id="nota_3_1_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_3_2_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_3_3_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_3_4_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_3_5_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_3_6_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_3_7_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_3_8_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+
+
+
+  <div id="nota_4_1_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_4_2_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_4_3_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_4_4_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_4_5_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_4_6_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_4_7_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_4_8_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+
+
+
+  <div id="nota_5_1_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_5_2_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_5_3_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_5_4_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_5_5_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_5_6_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_5_7_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+  <div id="nota_5_8_next" style="display: none;" class="btn-nota">
+    <p  class="btn-nota-content">
+    SIGUIENTE
+    </p>
+  </div>
+
+
+
+
+
+</div>
+<!-- END NOTA POSICION BOTONES -->
+
+<!-- BOTON CENTRO -->
+<div class="btn-centro-pos" id="btn-anotaciones-container">
+
+  <div id="nota_centro_1_1"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+  <div id="nota_centro_1_2"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+
+  <div id="nota_centro_2_1"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+  <div id="nota_centro_2_2"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+
+  <div id="nota_centro_3_1"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+  <div id="nota_centro_3_2"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+
+  <div id="nota_centro_4_1"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+  <div id="nota_centro_4_2"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+
+  <div id="nota_centro_5_1"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+  <div id="nota_centro_5_2"  class="btn-centro" style="display: none;" >
+    <p  class="btn-centro-content">
+      <i class="fa fa-camera" aria-hidden="true"></i> &nbsp; Tomar Captura de Pantalla
+    </p>
+  </div>
+  
+
+</div>
+<!-- BOTON CENTRO -->
+<!-- Botones controlar animaciones -->
+<div id="btn_mover_lupa_linterna" style="display: none;">
+  <div class="notes-div-btn" >
+    <div class="message-btn">
+      <p>
+  Mover lupa y linterna a la derecha
+      </p>
+    </div>     
+  </div>
+  
+ 
+</div>
+<!-- Botones controlar animaciones -->
+<!-- Botones controlar video -->
+<!-- <div id="btn_pausar_video" style="display: none;">
+  <div class="notes-div-btn-pausar" >
+    <nav class="nav-rc">
+      <div class="a-rc button-rc top-rc" href="#"><i class="icon-play i-rc"></i></div>
+      <div class="a-rc button-rc right-rc" href="#"><i class="icon-forward i-rc"></i></div>
+      <div class="a-rc button-rc left-rc" href="#"><i class="icon-backward i-rc"></i></div>
+      <div class="a-rc button-rc bottom-rc" href="#"><i class="icon-pause i-rc"></i></div>
+      <div id="btn-video-pause" class="a-rc center-button-rc" href="#"><i class="icon-stop i-rc"><i class="fa fa-pause" aria-hidden="true"></i></i></div>
+      <div id="btn-video-play" style="display: none;"class="a-rc center-button-rc" href="#"><i class="icon-stop i-rc"><i class="fa fa-play" aria-hidden="true"></i></i></div>
+    </nav>   
+  </div>
+</div> -->
+<!-- <div id="btn_mover_lupa_linterna_control" style="display: none;">
+  <div class="notes-div-btn-pausar" >
+    <nav class="nav-rc">
+      <div class="a-rc button-rc top-rc" href="#"><i class="icon-play i-rc"></i></div>
+      <div class="a-rc button-rc right-rc" href="#"><i class="icon-forward i-rc"></i></div>
+      <div class="a-rc button-rc left-rc" href="#"><i class="icon-backward i-rc"></i></div>
+      <div class="a-rc button-rc bottom-rc" href="#"><i class="icon-pause i-rc"></i></div>
+      <div id="btn_mover_a_pos2" class="a-rc center-button-rc" href="#"><i class="icon-stop i-rc"><i class="fa fa-arrow-right" aria-hidden="true"></i></i></div>
+      <div id="btn_mover_a_pos3" style="display: none;"class="a-rc center-button-rc" href="#"><i class="icon-stop i-rc"><i class="fa fa-arrow-right" aria-hidden="true"></i></i></div>
+      <div id="btn_mover_a_pos4" style="display: none;"class="a-rc center-button-rc" href="#"><i class="icon-stop i-rc"><i class="fa fa-arrow-right" aria-hidden="true"></i></i></div>
+      <div id="btn_mover_a_pos1" style="display: none;"class="a-rc center-button-rc" href="#"><i class="icon-stop i-rc"><i class="fa fa-arrow-right" aria-hidden="true"></i></i></div>
+    </nav>   
+  </div>
+  
+ 
+</div> -->
+<!-- Botones controlar video -->
+<!-- BOTON MOVER LUPA LINTERNA -->
+<div id="btn_mover_lupa_linterna_control" style="display: none;">
+  <div class="notes-div-btn-pausar" >
+    <div id="outer" class="outer-btn-cambiar-pos">
+      <div class="inner-btn-cambiar-pos">	
+        <button class="btn-cambiar-pos" id="btn_mover_a_pos3">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+        <button class="btn-cambiar-pos" id="btn_mover_a_pos4" style="display: none;">
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+        <button class="btn-cambiar-pos" id="btn_mover_a_pos1" style="display: none;">
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+        <button class="btn-cambiar-pos" id="btn_mover_a_pos2" style="display: none;">
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </div>	
+
+        </div>   
+  </div>
+</div>
+<!-- END BOTON MOVER LUPA LINTERNA -->
+<!-- Botones controlar video + y - -->
+<div id="btn_pausar_video" style="display: none;">
+  <div class="notes-div-btn-pausar" >
+    <div class="outer-btn-zoom">
+      <div class="inner-btn-zoom" id="btn_zoom_mas_1">	
+               <button id="zmas1" class="btn-zoom" style="background: #144a74;"><i class="fa fa-plus" aria-hidden="true"></i></button></div>	
+      <div class="inner-btn-zoom" id="btn_zoom_menos_1">	
+            <button id="zmenos1" class="btn-zoom"><i class="fa fa-minus" aria-hidden="true"></i></button>
+              
+            </div>	
+        </div> 
+  </div>
+</div>
+<!-- END Botones controlar video + y - -->
+<!-- CAJ VISTA MICROSCOPIO -->
+<div class="caj-microscopio-pos-container" id="caj_microscopio_pos_container"  style="display: none;" >
+<div class="caj-microscopio-pos">
+
+  <div class="video-container" id="caj_microscopio_1" style="display: none;" >
+    <div class="video-container-div">
+      <video class="video-container-video" id="m_v_1" controls>
+        <source id="mp4" src="https://res.cloudinary.com/tecdigital/video/upload/v1664169249/TECSUP/Laboratorios/Inspeccion%20Tecnica/1-abracion.mp4" type="video/mp4">
+      </video>
+   </div>
+  </div>
+  <div class="video-container" id="caj_microscopio_2" style="display: none;" >
+    <div class="video-container-div">
+      <video class="video-container-video" id="m_v_2" controls>
+        <source id="mp4" src="https://res.cloudinary.com/tecdigital/video/upload/v1664169249/TECSUP/Laboratorios/Inspeccion%20Tecnica/1-abracion.mp4" type="video/mp4">
+      </video>
+   </div>
+  </div>
+  <div class="video-container" id="caj_microscopio_3" style="display: none;" >
+    <div class="video-container-div">
+      <video class="video-container-video" id="m_v_3" controls>
+        <source id="mp4" src="https://res.cloudinary.com/tecdigital/video/upload/v1664169249/TECSUP/Laboratorios/Inspeccion%20Tecnica/1-abracion.mp4" type="video/mp4">
+      </video>
+   </div>
+  </div>
+  <div class="video-container" id="caj_microscopio_4" style="display: none;" >
+    <div class="video-container-div">
+      <video class="video-container-video" id="m_v_4" controls>
+        <source id="mp4" src="https://res.cloudinary.com/tecdigital/video/upload/v1664169249/TECSUP/Laboratorios/Inspeccion%20Tecnica/1-abracion.mp4" type="video/mp4">
+      </video>
+   </div>
+  </div>
+  <div class="video-container" id="caj_microscopio_5" style="display: none;" >
+    <div class="video-container-div">
+      <video class="video-container-video" id="m_v_5" controls>
+        <source id="mp4" src="https://res.cloudinary.com/tecdigital/video/upload/v1664169249/TECSUP/Laboratorios/Inspeccion%20Tecnica/1-abracion.mp4" type="video/mp4">
+      </video>
+   </div>
+  </div>
+   
+
+</div>
+</div>
+<!-- CAJ VISTA MICROSCOPIO -->
+
+
+
+
+
+
+ 
+ 
+  </div>
+ <!--  Fin v3d container -->
+</body>
+<script>
+
+  //ID del cajetin a ocultar
+  //ID del boton pequeño a reemplazar
+  function CollapseNota(nota_ocultar,btn_expandir_mostrar) 
+  {
+    nota_ocultar.style.display = "none"; 
+    btn_expandir_mostrar.style.display = "flex"; 
+  }
+  
+  //ID del boton pequeño a ocultar
+   //ID del cajetin a mostrar
+  
+  function ShowNota(btn_expandir_ocultar,nota_mostrar) 
+  {
+    btn_expandir_ocultar.style.display = "none"; 
+    nota_mostrar.style.display = "flex"; 
+  }
+
+  //Funcion para capturar la pantalla
+  //function getScreen() {
+   // var caption = 'inspeccion-a-ciguenal-' 
+    //html2canvas(document.body, {
+        //dpi: 192,
+        //onrendered: function(canvas) {
+           // $("#blank").attr('href', canvas.toDataURL("image/png"));
+           // $("#blank").attr('download', caption + '.png');
+           // $("#blank")[0].click();
+       //}
+   // });
+//}
+var screenshotVideo = (videoID, time) => { 
+
+  // Create a video element with source and seek to time
+  var video = document.createElement("m_v_1");
+ 
+  video.crossOrigin = "Anonymous";
+  video.currentTime = time;
+  video.play().then(() => {
+
+    // Pause the video at time
+    video.pause();
+
+    // Create canvas and draw current frame to it
+    var canvas = document.createElement('canvas');
+    canvas.width = 840;
+    canvas.height = 360;
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    // Ascii to binary conversion of canvas image
+    var image = canvas.toDataURL('image/jpeg');
+    var data = atob(image.substring("data:image/jpeg;base64,".length));
+    var asArray = new Uint8Array(data.length);
+    for (var i = 0, len = data.length; i < len; ++i) {
+        asArray[i] = data.charCodeAt(i);
+    }
+
+    // Create a blob from binary array
+    var f = new Blob([asArray.buffer], {type:'application/octet-stream'});
+    var a = document.createElement('a');
+    window.URL = window.URL || window.webkitURL;
+    a.href = window.URL.createObjectURL(f);
+    a.download = 'screenshot.png';
+    document.body.appendChild(a);
+    a.click();
+
+    // Remove the temporary link
+    document.body.removeChild(document.body.lastElementChild);
+    
+  });
+
+}
+
+//Funcion para cambiar el estado de progress bar
+
+const progress = document.getElementById("progress-pbar");
+const stepCircles = document.querySelectorAll(".circle-pbar");
+let currentActive = 1;
+
+//NOTE CHANGE HERE TO 1-4
+//1=25%
+//2=50%
+//3=75%
+//4=100%
+update(0);
+
+function update(currentActive) {
+  stepCircles.forEach((circle, i) => {
+    if (i < currentActive) {
+      circle.classList.add("active");
+    } else {
+      circle.classList.remove("active");
+    }
+  });
+
+  const activeCircles = document.querySelectorAll(".active");
+  progress.style.width =
+    ((activeCircles.length - 1) / (stepCircles.length - 1)) * 100 + "%";
+
+  
+}
+
+
+
+</script>
+</html>

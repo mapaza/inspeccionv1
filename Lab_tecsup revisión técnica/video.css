@@ -1,0 +1,99 @@
+.caj-microscopio-pos-container{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    background: #28222280;
+}
+.caj-microscopio-pos{
+    position: absolute;
+    top: auto;
+    bottom: 12%;
+    left: auto;
+    right: 33%;
+    margin: auto;
+    width: 53%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .caj-microscopio{
+    border: 1px solid #015fb1b5;
+    background-color: rgb(13 124 25 / 90%);
+    box-shadow: 0px 0px 2px #015fb1;
+    color: #02549b;
+    /* text-shadow: 2px 1px #00040a; */
+    transition: 0.5s;
+    cursor: pointer;
+    /* padding-right: 8%; */
+    /* padding-left: 11%; */
+    position: relative;
+    /* padding: 1.5vh 2.5vh; */
+    /* margin-bottom: 1rem; */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    /* padding-left: 32%; */
+    box-shadow: rgb(0 0 0 / 15%) 11px 13px 17px, rgb(0 0 0 / 22%) 0px 15px 12px;
+  }
+  
+  
+  .caj-microscopio-content{
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 2.8vh;
+    -webkit-animation: blink-1 2s infinite both;
+          animation: blink-1 2s infinite both;
+  }
+
+.video-container {
+      /* width: 100%; */
+    /* height: 100%; */
+    /* max-width: 1034px; */
+    /* max-height: 543px; */
+    /* margin: 0 auto; */
+}
+.video-container-div {
+        /* position: relative; */
+    /* padding-top: 25px; */
+    padding-bottom: 67.5%;
+    /* height: 0; */
+}
+.video-container-video {
+    box-sizing: border-box;
+    background: url(https://i.stack.imgur.com/zZNgk.png) center center no-repeat;
+    background-size: contain;
+    padding: 11.9% 15.5% 14.8%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+.wrap {
+    border: solid 1px #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #output {
+    display: inline-block;
+    top: 4px;
+    position: relative;
+    border: dotted 1px #ccc;
+    padding: 2px;
+  }
+  
+  .button {
+    border: solid 2px #ccc;
+  }

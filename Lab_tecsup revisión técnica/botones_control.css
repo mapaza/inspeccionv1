@@ -1,0 +1,49 @@
+.outer-btn-cambiar-pos
+{
+    width:100%;
+    text-align: center;
+}
+.inner-btn-cambiar-pos
+{
+    display: inline-block;
+}
+
+.btn-cambiar-pos{
+	       /* padding: 2vh 3vh; */
+           background: #408fe1;
+           border: 3px solid #fff;
+           cursor: pointer;
+           /* -webkit-border-radius: 5px; */
+           /* border-radius: 5px; */
+           color: #fbfbfb;
+           font-size: 4vh;
+           width: 11vh;
+           height: 11vh;
+           border-radius: 40px;
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.outer-btn-zoom
+{
+    width:100%;
+    text-align: center;
+}
+.inner-btn-zoom
+{
+    display: inline-block;
+}
+
+
+.btn-zoom{
+    padding: 2vh 3vh;
+    background: #fdfdfd;
+    border: 3px solid #adadade8;
+    cursor: pointer;
+    /* -webkit-border-radius: 5px; */
+    /* border-radius: 5px; */
+    color: #bdbcbc;
+    font-size: 4vh;
+    width: 11vh;
+    transition: color 1s;
+}
+

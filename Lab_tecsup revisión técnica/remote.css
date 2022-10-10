@@ -1,0 +1,149 @@
+@import "compass/css3";
+
+
+.nav-rc{
+    width: 23vh;
+    height: 23vh;
+    background: #8cb1cf;
+    border-radius: 50%;
+    padding: 3vh;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: inset -12px 0 12px -6px #ddd,
+    inset 12px 0 12px -6px #FFF,
+    inset 0 0 0 12px #EEE,
+    inset 2px 0 4px 12px rgba(0,0,0,0.4),
+    1px 0 4px rgba(0,0,0,0.8);
+    box-sizing: border-box;
+    position: relative;
+    margin: 10px auto;
+}
+
+.a-rc {
+  text-decoration: none;
+  
+}
+
+.center-button-rc{
+  display: block;
+  height: 38%;
+  width: 38%;
+  position: absolute;
+  top: 31%;
+  left: 31%;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 0 4px rgba(0,0,0,0.8);
+}
+
+.button-rc{
+  display: block;
+  width: 46%;
+  height: 46%;
+  margin: 2%;
+  position: relative;
+  float: left;
+  box-shadow: 1px 0px 3px 1px rgba(0,0,0,0.4), inset 0 0 0 1px #FFF;
+}
+
+.button-rc::after{
+    content: "";
+    display: block;
+    width: 2%;
+    height: 2%;
+    background: #60B8CE;
+    position: absolute;
+    border-radius: inherit;
+}
+
+.button-rc.top-rc{
+  border-radius: 100% 0 0 0;
+  background: -webkit-radial-gradient(bottom right, ellipse cover, #fff 35%,#eee 75%);
+  background: radial-gradient(bottom right, ellipse cover, #fff 35%,#eee 75%);
+}
+
+.button-rc.top-rc::after{
+  bottom: 0;
+  right: 0;
+  box-shadow: inset 2px 1px 2px 0 rgba(0,0,0,0.4), 10px 10px 0 10px #60B8CE;
+  -webkit-transform: skew(-3deg,-3deg) scale(0.96);
+  -moz-transform: skew(-3deg,-3deg) scale(0.96);
+  transform: skew(-3deg,-3deg) scale(0.96);
+}
+
+.button-rc.right-rc{
+  border-radius: 0 100% 0 0;
+  background: -webkit-radial-gradient(bottom left, ellipse cover, #fff 35%,#eee 75%);
+}
+
+.button-rc.right-rc::after{
+  bottom: 0;
+  left: 0;
+  box-shadow: inset -2px 3px 2px -2px ,rgba(0,0,0,0.4) -10px 10px 0 10px#60B8CE;
+  -webkit-transform: skew(3deg,3deg) scale(0.96);
+  -moz-transform: skew(3deg,3deg) scale(0.96);
+  transform: skew(3deg,3deg) scale(0.96);
+}
+
+.button-rc.left-rc{
+  border-radius: 0 0 0 100%;
+  background: -webkit-radial-gradient(top right, ellipse cover, #fff 35%,#eee 75%);
+   background: radial-gradient(top right, ellipse cover, #fff 35%,#eee 75%);
+}
+
+.button-rc.left-rc::after{
+  top: 0;
+  right: 0;
+  box-shadow: inset 2px -1px 2px 0 rgba(0,0,0,0.4), 10px -10px 0 10px #60B8CE;
+  -webkit-transform: skew(3deg,3deg) scale(0.96);
+  -moz-transform: skew(3deg,3deg) scale(0.96);
+  transform: skew(3deg,3deg) scale(0.96);
+}
+
+.button-rc.bottom-rc{
+  border-radius: 0 0 100% 0;
+  background: -webkit-radial-gradient(top left, ellipse cover, #fff 35%,#eee 75%);
+  background: radial-gradient(top left, ellipse cover, #fff 35%,#eee 75%);
+}
+
+.button-rc.bottom-rc::after{
+  top: 0;
+  left: 0;
+  box-shadow: inset -2px -3px 2px -2px rgba(0,0,0,0.4), -10px -10px 0 10px #60B8CE;
+  -webkit-transform: skew(-3deg,-3deg) scale(0.96);
+  -moz-transform: skew(-3deg,-3deg) scale(0.96);
+  transform: skew(-3deg,-3deg) scale(0.96);
+}
+
+.i-rc {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    font-size: 3vh;
+    top: 32%;
+    left: 41%;
+    text-shadow: 1px 1px 4px #FFF, 0px 0px 0px rgba(0,0,0,0.5);
+    color: #196eb1;
+}
+
+.top-rc  i {
+  top:35%;
+  left:41%;
+}
+
+.left-rc i {
+  top:41%;
+  left:35%;
+}
+
+.right-rc i {
+  top:35%;
+  left:41%;
+}
+
+.bottom-rc i {
+  top:39%;
+  left:42%;
+}
